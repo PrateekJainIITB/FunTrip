@@ -1,0 +1,35 @@
+User-agent: *
+Disallow: /private/
+Disallow: /assets/
+Disallow: /restricted/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /temp/
+Disallow: /uploads/
+Disallow: /download/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /cache/
+Disallow: /scripts/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /htmlcreator.sh
+
+Allow: /$
+Allow: /destinations/
+Allow: /about-us.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /destinations.html
+Allow: /favicon.svg
+Allow: /funtrip-logo.png
+Allow: /index.html
+Disallow: /trip-planner.html
+
+Allow: /sitemap.xml
+
+Sitemap: https://funtrip.in/sitemap.xml

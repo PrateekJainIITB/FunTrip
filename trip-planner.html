@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FunTrip - Unleashing Joy in Every Journey</title>
+
+  <!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+  <!-- Meta Description -->
+  <meta name="description" content="FunTrip - Unleashing Joy in Every Journey. Explore our travel platform for exciting destinations, trip planning, blogs, and more. Start your adventure with FunTrip today!">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://www.yourwebsite.com">
+<style>
+  .trip-article {
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+.trip-planner-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trip-planner-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-select, .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #009698;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #29d2d4;
+}
+
+</style>
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="navbar-link">
+        <h1 class="logo">FunTrip</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="trip-planner.html" class="navbar-link">Trip Planner</a></li>
+            <li><a href="destinations.html" class="navbar-link">Destinations</a></li>
+            <li><a href="blog.html" class="navbar-link">Blog</a></li>
+            <li><a href="about-us.html" class="navbar-link">About Us</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact Us</a></li>
+        </ul>
+
+        <a href="/story.html" class="btn btn-secondary">Stories</a>
+
+    </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article class="trip-article">
+  
+      <!-- Trip Planner Section -->
+      <section id="trip-planner" class="trip-planner-section">
+        <h2 class="section-heading">Plan Your Adventure</h2>
+        <div class="trip-planner-form">
+          <form action="processForm.php" method="post" id="tripForm" class="trip-form">
+            <!-- Starting Point Dropdown -->
+          <div class="form-group">
+            <label for="startingPoint" class="form-label">Starting Point:</label>
+            <select id="startingPoint" name="startingPoint" class="form-select" required>
+              <option value="">--Select a starting location--</option>
+              <!-- options here -->
+              <option value="andhra_pradesh">Andhra Pradesh</option>
+              <option value="arunachal_pradesh">Arunachal Pradesh</option>
+              <option value="assam">Assam</option>
+              <option value="bihar">Bihar</option>
+              <option value="chhattisgarh">Chhattisgarh</option>
+              <option value="goa">Goa</option>
+              <option value="gujarat">Gujarat</option>
+              <option value="haryana">Haryana</option>
+              <option value="himachal_pradesh">Himachal Pradesh</option>
+              <option value="jharkhand">Jharkhand</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="kerala">Kerala</option>
+              <option value="madhya_pradesh">Madhya Pradesh</option>
+              <option value="maharashtra">Maharashtra</option>
+              <option value="manipur">Manipur</option>
+              <option value="meghalaya">Meghalaya</option>
+              <option value="mizoram">Mizoram</option>
+              <option value="nagaland">Nagaland</option>
+              <option value="odisha">Odisha</option>
+              <option value="punjab">Punjab</option>
+              <option value="rajasthan">Rajasthan</option>
+              <option value="sikkim">Sikkim</option>
+              <option value="tamil_nadu">Tamil Nadu</option>
+              <option value="telangana">Telangana</option>
+              <option value="tripura">Tripura</option>
+              <option value="uttar_pradesh">Uttar Pradesh</option>
+              <option value="uttarakhand">Uttarakhand</option>
+              <option value="west_bengal">West Bengal</option>
+              <!-- Union Territories -->
+              <option value="andaman_and_nicobar_islands">Andaman and Nicobar Islands</option>
+              <option value="chandigarh">Chandigarh</option>
+              <option value="dadra_and_nagar_haveli_and_daman_and_diu">Dadra and Nagar Haveli and Daman and Diu</option>
+              <option value="delhi">Delhi</option>
+              <option value="lakshadweep">Lakshadweep</option>
+              <option value="jammu_and_kashmir">Jammu and Kashmir</option>
+              <option value="puducherry">Puducherry</option>
+            </select>
+          </div>
+
+  
+            <!-- Destination Dropdown -->
+            <div class="form-group">
+              <label for="destination" class="form-label">Select Destination:</label>
+              <select id="destination" name="destination" class="form-select" required>
+                <!-- options here -->
+                  <option value="andhra_pradesh">Andhra Pradesh</option>
+                  <option value="arunachal_pradesh">Arunachal Pradesh</option>
+                  <option value="assam">Assam</option>
+                  <option value="bihar">Bihar</option>
+                  <option value="chhattisgarh">Chhattisgarh</option>
+                  <option value="goa">Goa</option>
+                  <option value="gujarat">Gujarat</option>
+                  <option value="haryana">Haryana</option>
+                  <option value="himachal_pradesh">Himachal Pradesh</option>
+                  <option value="jharkhand">Jharkhand</option>
+                  <option value="karnataka">Karnataka</option>
+                  <option value="kerala">Kerala</option>
+                  <option value="madhya_pradesh">Madhya Pradesh</option>
+                  <option value="maharashtra">Maharashtra</option>
+                  <option value="manipur">Manipur</option>
+                  <option value="meghalaya">Meghalaya</option>
+                  <option value="mizoram">Mizoram</option>
+                  <option value="nagaland">Nagaland</option>
+                  <option value="odisha">Odisha</option>
+                  <option value="punjab">Punjab</option>
+                  <option value="rajasthan">Rajasthan</option>
+                  <option value="sikkim">Sikkim</option>
+                  <option value="tamil_nadu">Tamil Nadu</option>
+                  <option value="telangana">Telangana</option>
+                  <option value="tripura">Tripura</option>
+                  <option value="uttar_pradesh">Uttar Pradesh</option>
+                  <option value="uttarakhand">Uttarakhand</option>
+                  <option value="west_bengal">West Bengal</option>
+                  <!-- Union Territories -->
+                  <option value="andaman_and_nicobar_islands">Andaman and Nicobar Islands</option>
+                  <option value="chandigarh">Chandigarh</option>
+                  <option value="dadra_and_nagar_haveli_and_daman_and_diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="lakshadweep">Lakshadweep</option>
+                  <option value="jammu_and_kashmir">Jammu and Kashmir</option>
+                  <option value="puducherry">Puducherry</option>
+                </select>
+              </div>
+    
+              <!-- Date Pickers -->
+              <div class="form-group date-group">
+                <label for="startDate" class="form-label">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" class="form-input" required>
+              </div>
+              <div class="form-group date-group">
+                <label for="endDate" class="form-label">End Date:</label>
+                <input type="date" id="endDate" name="endDate" class="form-input" required>
+              </div>
+    
+              <!-- Budget Input -->
+              <div class="form-group">
+                <label for="budget" class="form-label">Budget (in INR):</label>
+                <input type="number" id="budget" name="budget" class="form-input" required>
+              </div>
+    
+              <!-- Submit Button -->
+              <button type="submit" class="submit-button">Plan My Trip</button>
+            </form>
+          </div>
+        </section>
+    
+      </article>
+    </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top destination</p>
+          </li>
+
+          <li>
+            <a href="/destinations/Taj_Mahal_-_Sunset_Silhouette,_Uttar_Pradesh.html" class="footer-link">Taj Mahal, Agra</a>
+          </li>
+
+          <li>
+            <a href="/destinations/Rishikesh,_Uttarakhand.html" class="footer-link">Rishikesh, Uttarakhand</a>
+          </li>
+
+          <li>
+            <a href="/destinations/Rameshwaram_Temple.html" class="footer-link">Rameshwaram, Tamil Nadu</a>
+          </li>
+
+          <li>
+            <a href="/destinations/Gulmarg_Bowl,_Jammu_and_Kashmir.html" class="footer-link">Gulmarg Bowl, Jammu and Kashmir</a>
+          </li>
+
+          <li>
+            <a href="/destinations/Auroville,_Puducherry.html" class="footer-link">Auroville, Puducherry</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Categories</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Travel</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fashion</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Education</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Food & Drink</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick links</p>
+          </li>
+
+          <li>
+            <a href="/about-us.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="/contact.html" class="footer-link">Contact</a>
+          </li>
+
+          <li>
+            <a href="/trip-planner.html" class="footer-link">Trip-planner</a>
+          </li>
+
+          <li>
+            <a href="/blog.html" class="footer-link">Blogs</a>
+          </li>
+
+          
+          <li>
+            <a href="/Terms_and_Conditions.html" class="footer-link">Terms & Conditions</a>
+          </li>
+
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Get a newsletter</p>
+
+          <p class="newsletter-text">
+            For the latest deals and tips, travel no further than your inbox
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="/index.html" class="logo">Fun Trip</a>
+
+        <p>&copy; 2024 FunTrip.in. All rights reserved.</p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
